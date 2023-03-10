@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Page styles - make your own! -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,*:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .containers {
+      padding: 0 16px;
+      color: white;
+    }
+
+    .containers::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: white;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+
+    h1 {
+       color: #000000;
+      text-align: center;
+      text-decoration: wavy;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+      text-decoration-color: aliceblue;
+    }
+
+    h4 {
+      color: #000000;
+      text-align: center;
+      text-decoration: underline;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: xx-large;
+      font-weight: bold;
+      text-decoration-color: gray;
+    }   
+
+    p {
+      color: #000000;
+      text-align: center;
+      font-size: 12px;
+      font-style: bold;
+      font: arial
+  } 
+
+  .container {
+    position: relative;
+    height: 450px;
+    background-image: url(images/carbanner2.jpg);
+    background-size: cover;
+  }
+  .text-block {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: black;
+    padding: 0px;
+    font-size: 35px;
+  }
+
+
+  h1 {
+    font-family: 'Bungee Spice', cursive;
+}
+  </style>
+
+  <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
+  <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body style="background-color: rgb(40, 53, 116);">
+
+
+  <header class="header">
+    <table width="100%">
+      <tr>
+          <td>
+              <div class="logo">
+                  <div class="container">
+                      <div class="text-block">
+                          <!--<img src="images/carbanner2.jpg", width="100%", height="400px">-->
+                          <h1>v4 MotorZ</h1>
+                      </div>
+                  </div>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <nav class="navbar">
+                  <a href="index.html">Home</a>
+                  <a href="about.html" a.>About</a>
+                  <a href="car.html">Cars</a>
+                  <a href="contact.html">Contact</a>
+                  <a href="location.html">Location</a>
+                  <a href="loan.html">Loan estimator</a>
+              </nav>
+          </td>
+      </tr>
+  </table>
+
+  </header>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="images/chevy.webp" alt="Jane" style="width:100%">
+        <div class="containers">
+          <h2>Chevrolet Silverado 1500 Work Truck</h2>
+          <p class="title">2010</p>
+          <p>64,870 miles</p>
+          <p>$13,965</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/honda.webp" alt="Mike" style="width:100%">
+        <div class="containers">
+          <h2>Honda CR-V EX</h2>
+          <p class="title">2011</p>
+          <p>149,448 miles</p>
+          <p>$10,911</p>
+          <p><button class="button">Purchase</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/hyundai.webp" alt="John" style="width:100%">
+        <div class="containers">
+          <h2>Hyundai Santa Fe GLS</h2>
+          <p class="title">2005</p>
+          <p>159,863 miles</p>
+          <p>$3950</p>
+          <p><button class="button">Purchase</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="images/prius.jpg" alt="John" style="width:100%">
+      <div class="containers">
+        <h2>Toyota Prius Plug-in Advanced</h2>
+        <p class="title">2015</p>
+        <p>56,359 miles</p>
+        <p>$19,595</p>
+        <p><button class="button">Purchase</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/malibu.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Toyota Camry Solara SLE</h2>
+      <p class="title">2008</p>
+      <p>118,972 miles</p>
+      <p>$8,995</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/camry.jpg" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Chevrolet Malibu 1LS</h2>
+      <p class="title">2015</p>
+      <p>31,477 miles</p>
+      <p>$14,699</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/sienna.jpg" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Toyota Sienna XLE</h2>
+      <p class="title">2012</p>
+      <p>118,050 miles</p>
+      <p>$17,449</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/jeep.png" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Jeep Wrangler Unlimited X</h2>
+      <p class="title">2009</p>
+      <p>93,287 miles</p>
+      <p>$17,707 </p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/benz.jpg" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Mercedes-Benz GL-Class GL 450 4MATIC</h2>
+      <p class="title">2013</p>
+      <p>134,154 miles</p>
+      <p>$16,266</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/forte.jpg" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Kia Forte SX</h2>
+      <p class="title">2011</p>
+      <p>144,965 miles</p>
+      <p>$6,998</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/lexus.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Lexus CT 200h Premium</h2>
+      <p class="title">2012</p>
+      <p>109,384 miles</p>
+      <p>$16,350</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="column">
+  <div class="card">
+    <img src="images/sx4.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Suzuki SX4 Sportback</h2>
+      <p class="title">2010</p>
+      <p>65,582 miles</p>
+      <p>$8,261</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="column">
+  <div class="card">
+    <img src="images/subu.jpg" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Subaru Impreza 2.0i Sport Premium</h2>
+      <p class="title">2012</p>
+      <p>107,681 miles</p>
+      <p>$13,250</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/lexus.avif" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Lexus GX 460 Premium</h2>
+      <p class="title">2012</p>
+      <p>126,901 miles</p>
+      <p>$19,999</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="column">
+  <div class="card">
+    <img src="images/outlander.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Mitsubishi Outlander ES</h2>
+      <p class="title">2020</p>
+      <p>43,482 miles</p>
+      <p>$18,999</p>
+      <p><button class="button">Purchase</button></p>Mitsubishi Outlander ES
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/cad.jpg" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Cadillac CTS Base</h2>
+      <p class="title">2008</p>
+      <p>144,338 miles</p>
+      <p>$7,940</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/scary.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Nissan NV200 SV</h2>
+      <p class="title">2015</p>
+      <p>137,880 miles</p>
+      <p>$12,499</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="column">
+  <div class="card">
+    <img src="images/ram.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Dodge Ram 1500 ST</h2>
+      <p class="title">2010</p>
+      <p>78,449 miles</p>
+      <p>$12,467</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/hummer.png" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Hummer H2</h2>
+      <p class="title">2006</p>
+      <p>190,159 miles</p>
+      <p>$14,999</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/ody.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Honda Oddessey EX-L</h2>
+      <p class="title">2016</p>
+      <p>97,996 miles</p>
+      <p>$19,996</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/porshe.jpg" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Porsche Cayenne S</h2>
+      <p class="title">2008</p>
+      <p>134,783 miles</p>
+      <p>$18,972</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/jeep2png.png" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Jeep Cherokee Latitude</h2>
+      <p class="title">2015</p>
+      <p>124,300 miles</p>
+      <p>$14,995</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="images/f150.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>Ford F-150 FX4 SuperCab</h2>
+      <p class="title">2004</p>
+      <p>103,574 miles</p>
+      <p>$6,995</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="column">
+  <div class="card">
+    <img src="images/bmw.webp" alt="John" style="width:100%">
+    <div class="containers">
+      <h2>BMW 228 i</h2>
+      <p class="title">2012</p>
+      <p>42,959 miles</p>
+      <p>$15,998</p>
+      <p><button class="button">Purchase</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="scripts/conversation.js"></script>
+  <script type="text/babel" data-presets="es2015,es2016,es2017" src="scripts/peekobot.js"></script>
+
+  <footer>
+      <center><p>Copyright PAAR Inc. 2023</p></center>
+  </footer>
+
+</body>
+
+</html>
